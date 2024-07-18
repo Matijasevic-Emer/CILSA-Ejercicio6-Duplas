@@ -108,12 +108,16 @@
                   </div>
                   <div class="form-group m-3">
                     <textarea
+                      required
                       id="message"
                       class="form-control w-100"
                       aria-label="With textarea"
                       style="height: 100px"
                       placeholder="Ingrese su mensaje aquí"
                     ></textarea>
+                    <div class="invalid-feedback">
+                      Por favor ingrese un mensaje válido.
+                    </div>
                   </div>
                   <div class="d-grid gap-2">
                     <button
@@ -122,31 +126,30 @@
                     >
                       ENVIAR
                     </button>
+                    <div>
+                      <div
+                        id="liveToast"
+                        class="toast align-items-center text-bg-danger border-0"
+                        role="alert"
+                        aria-live="assertive"
+                        aria-atomic="true"
+                      >
+                        <div class="d-flex">
+                          <div id="msg-body" class="toast-body">
+                            Hello, world! This is a toast message.
+                          </div>
+                          <button
+                            type="button"
+                            class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div
-            id="liveToast"
-            class="toast align-items-center text-bg-danger border-0"
-            role="alert"
-            aria-live="assertive"
-            aria-atomic="true"
-          >
-            <div class="d-flex">
-              <div id="msg-body" class="toast-body">
-                Hello, world! This is a toast message.
-              </div>
-              <button
-                type="button"
-                class="btn-close btn-close-white me-2 m-auto"
-                data-bs-dismiss="toast"
-                aria-label="Close"
-              ></button>
             </div>
           </div>
         </div>

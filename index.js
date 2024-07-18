@@ -11,17 +11,17 @@ const checkField = (event) => {
     const email = document.getElementById("email").value.trim();
     let checked = true;
 
-    if (name && surname && message) {
+    if (name && email && message) {
         if (!onlyLettersPattern.test(name)) {
             checked = false;
             customAlert("El campo 'Nombre' solo acepta letras. Por favor corrija");
         }
         if (name.length < 3) { customAlert("El campo 'Nombre' es muy corto. Por favor corrija"); checked = false; }
-        if (!onlyLettersPattern.test(surname)) {
+        if (!emailPattern.test(email)) {
             checked = false;
-            customAlert("El campo 'Apellido' solo acepta letras. Por favor corrija");
+            customAlert("El campo 'Email' no corresponde a un correo electónico válido. Por favor corrija");
         }
-        if (0 < message.length < 3) { customAlert("El campo 'Mensaje' es muy corto. Por favor corrija"); checked = false; }
+
     } else {
         checked = false;
         customAlert("Por favor complete los campos del formulario.");
